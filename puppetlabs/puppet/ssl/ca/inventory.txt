@@ -1,0 +1,4 @@
+0x0001 2018-02-11T07:21:07UTC 2023-02-11T07:21:07UTC /CN=Puppet CA: puppet.medusa.mezzonet.net
+0x0002 2018-02-11T07:21:12UTC 2023-02-11T07:21:12UTC /CN=puppet.medusa.mezzonet.net
+0x0003 2018-02-11T08:56:55UTC 2023-02-11T08:56:55UTC /CN=node1.medusa.mezzonet.net
+0x0004 2018-02-11T08:59:40UTC 2023-02-11T08:59:40UTC /CN=node2.medusa.mezzonet.net

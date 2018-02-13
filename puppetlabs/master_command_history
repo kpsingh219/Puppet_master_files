@@ -1,0 +1,258 @@
+    1  ip a
+    2  ping 192.268.56.101
+    3  ping 192.168.56.101
+    4  ping 192.168.56.103
+    5  hostname puppet
+    6  ls
+    7  echo puppet >/etc/hostname
+    8  cat /etc/hostname
+    9  exec bash
+   10  vi /etc/hosts
+   11  ipa 
+   12  cat /etc/hosts
+   13  ping node1
+   14  ping node2
+   15  uname -r
+   16  uname -a
+   17  wget
+   18  wget 192.168.56.102  puppet
+   19  192.168.56.101  node2
+   20  192.168.56.103  node1
+   21  wget http://apt.puppetlabs.com/puppet5-release-xenial.deb
+   22  ls
+   23  dpkg -i puppet5-release-xenial.deb 
+   24  apt-get install puppetserver
+   25  apt-get update
+   26  apt-get install puppet-server
+   27  apt-get install puppetserver
+   28  cd /opt
+   29  ls
+   30  cd puppetlabs/
+   31  ls
+   32  cd bin/
+   33  ls
+   34  export PATH=$PATH:/opt/puppetlabs/bin
+   35  puppet
+   36  cd ..
+   37  cd /etc/puppetlabs/
+   38  ls
+   39  id puppet
+   40  cd /var/log/puppetlabs/
+   41  ls
+   42  cd -
+   43  ls
+   44  cd ../default/
+   45  ls
+   46  vi puppetserver 
+   47  ps -ef | grep puppet
+   48  puppet resource service puppetserver ensure=running
+   49  service puppet status
+   50  service puppetserver status
+   51  vi puppetserver 
+   52  cd
+   53  cd /etc/puppetlabs/
+   54  ls
+   55  cd puppetserver/
+   56  ls
+   57  cd ../puppet/ssl/
+   58  ls
+   59  puppet --version
+   60  facter --version
+   61  heira --version
+   62  hiera --version
+   63  mcs --version
+   64  mc0 --version
+   65  mco --version
+   66  puppetserver --version
+   67  cd 
+   68  ip a
+   69  puppet cert list -a
+   70  puppet cert list
+   71  puppet cert sign http://apt.puppetlabs.com/puppet5-release-xenial.deb
+   72  puppet cert sign node1.medusa.mezzonet.net
+   73  puppet cert list
+   74  puppet cert sign node2.medusa.mezzonet.net
+   75  puppet cert list -a
+   76  cd /etc/puppetlabs/puppet
+   77  ls
+   78  cd ssl/ca/signed/
+   79  ls
+   80  cd ..
+   81  ls
+   82  cd private_keys/
+   83  ls
+   84  cd ../private
+   85  ls
+   86  cd ../certts
+   87  cd ../certs
+   88  ls
+   89  updatedb
+   90  locate node1
+   91  cd ../../../code/
+   92  ls
+   93  cd environments/
+   94  ls
+   95  cd production/
+   96  ls
+   97  cd ../..
+   98  ls
+   99  cd modules/
+  100  ls
+  101  cd ../environments/production/
+  102  ls
+  103  less environment.conf 
+  104  cd manifests/
+  105  ls
+  106  cd ../modules/
+  107  ls
+  108  cd ..
+  109  ls
+  110  less hiera.yaml 
+  111  ls data/
+  112  cd manifests/
+  113  vi site.pp
+  114  cd ../..
+  115  ls -lR
+  116  cd -
+  117  vi site.pp 
+  118  apt-get install vim
+  119  vim site.pp 
+  120  puppet parser validate site.pp
+  121  vim site.pp 
+  122  cat site.pp 
+  123  openssl
+  124  openssl passwd
+  125  vi site.pp 
+  126  cat site.pp 
+  127  ip a
+  128  service puppetserver status
+  129  ls
+  130  vim site.pp 
+  131  cd ../../..
+  132  cd modules/
+  133  ls
+  134  puppet module generate --skip-interview root-webserver
+  135  ls
+  136  cd webserver/
+  137  ls
+  138  cd manifests/
+  139  ls
+  140  vi createfile.pp
+  141  vi init.pp 
+  142  puppet module generate --skip-interview root-webserver2
+  143  ls
+  144  rm -rf webserver2/
+  145  cd ../..
+  146  puppet module generate --skip-interview root-webserver2
+  147  ls
+  148  cd webserver2
+  149  cd manifests/
+  150  ls
+  151  vi createfile.pp
+  152  vi init.pp 
+  153  vi ../../webserver/manifests/init.pp 
+  154  cd ../../../environments/production/manifests/
+  155  ls
+  156  vi site.pp 
+  157  vim site.pp 
+  158  puppet parser site
+  159  puppet parser site.pp
+  160  puppet parser validate site.pp
+  161  vim site.pp 
+  162  puppet parser validate site.pp
+  163  vim site.pp 
+  164  puppet parser validate site.pp
+  165  vim site.pp 
+  166  puppet parser validate site.pp
+  167  vim site.pp 
+  168  puppet parser validate site.pp
+  169  vim site.pp 
+  170  puppet parser validate site.pp
+  171  vim site.pp 
+  172  puppet parser validate site.pp
+  173  vim site.pp 
+  174  cd -
+  175  ls -l 
+  176  cat init.pp 
+  177  cat createfile.pp 
+  178  cd ../../webserver
+  179  ls
+  180  cd manifests/
+  181  ls
+  182  cat createfile.pp 
+  183  mv createfile.pp createfile1.pp 
+  184  vi init.pp 
+  185  cd ../../../environments/production/manifests/
+  186  ls
+  187  vi site.pp 
+  188  fg
+  189  puppet parser validate site.pp
+  190  vi site.pp 
+  191  puppet parser validate site.pp
+  192  vi site.pp 
+  193  puppet parser validate site.pp
+  194  cd ../../../modules/webserver
+  195  vi in
+  196  cd manifests/
+  197  vi init.pp 
+  198  ls
+  199  vi init.pp 
+  200  vi createfile1.pp 
+  201  cd
+  202  puppet
+  203  puppet help
+  204  puppet ca help
+  205  puppet help ca | less
+  206  ls
+  207  cd /etc/puppetlabs/puppet
+  208  ls
+  209  cd ..
+  210  ls
+  211  cd code/environments/
+  212  ls
+  213  cp -r production development
+  214  ls
+  215  cd development/
+  216  ls
+  217  vi environment.conf 
+  218  cd manifests/
+  219  ls
+  220  vi site.pp 
+  221  vim site.pp 
+  222  service puppetserver restart
+  223  cd ../..
+  224  ls
+  225  ls -l 
+  226  cd development/
+  227  lsl
+  228  ls
+  229  ls -l data
+  230  cd ..
+  231  ls
+  232  cd ..
+  233  ls
+  234  cd puppet
+  235  ls
+  236  cd ssl/
+  237  ls
+  238  cd cert
+  239  cd certs
+  240  ls
+  241  cd ../private_keys/
+  242  ls
+  243  puppet cert list -a
+  244  updatedb
+  245  locate node1.medusa.mezzonet.net
+  246  ls
+  247  cd ..
+  248  ls
+  249  cd ca/
+  250  ls
+  251  vi inventory.txt 
+  252  cd
+  253  apt-get install git
+  254  git list
+  255  cd 
+  256  cd /etc/puppetlabs/
+  257  ls
+  258  history > master_command_history
